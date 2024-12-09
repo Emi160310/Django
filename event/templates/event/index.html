@@ -1,0 +1,9 @@
+<form action="{% url 'event:vote' question.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend>
+            <h1>{{event.event_text}}</h1>
+        </legend>
+    </fieldset>
+    <input type="submit" value="Vote">
+</form>
